@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--<html oncontextmenu="return false" onselectstart="return false" ondragstart="return false" ></html>-->
+<html lang="en">
+
+
+
+
+<head>
+
+   
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="boy.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+
+    <script type="text/javascript">
+        document.onkeydown = function (e) {
+            return false;
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b8f70dafc1.js" crossorigin="anonymous"></script>
+
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <title>CodewithSam</title>
+
+</head>
+
+<body>
+
+
+
+
+
+    <div class="contain">
+        <div class="content">
+
+            <h3 class="title">Projects are coming soon 🚀</h3>
+            <p>Trying to become a Front-End developer. Let's see how it goes!</p>
+
+
+            <div class="count-down">
+                <div class="box">
+                    <h3 id="day">00</h3>
+                    <span>day</span>
+                </div>
+                <div class="box">
+                    <h3 id="hour">00</h3>
+                    <span>hour</span>
+                </div>
+                <div class="box">
+                    <h3 id="minute">00</h3>
+                    <span>minute</span>
+                </div>
+                <div class="box">
+                    <h3 id="second">00</h3>
+                    <span>second</span>
+                </div>
+            </div>
+
+
+
+
+
+            <a href="index.html" class="but">Home</a>
+
+
+        </div>
+
+
+
+
+
+        <div class="imag">
+
+            
+
+            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_w98qte06.json" class="mx-auto w-4/5"
+                background="transparent" speed="1" loop autoplay></lottie-player>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <script>
+
+        let countDate = new Date('april 20, 2023 00:00:00').getTime();
+
+        function countDown() {
+            let now = new Date().getTime();
+            gap = countDate - now;
+
+            let second = 1000;
+            let minute = second * 60;
+            let hour = minute * 60;
+            let day = hour * 24;
+
+            let d = Math.floor(gap / (day));
+            let h = Math.floor((gap % (day)) / (hour));
+            let m = Math.floor((gap % (hour)) / (minute));
+            let s = Math.floor((gap % (minute)) / (second));
+
+            document.getElementById('day').innerText = d;
+            document.getElementById('hour').innerText = h;
+            document.getElementById('minute').innerText = m;
+            document.getElementById('second').innerText = s;
+
+        }
+
+
+
+
+        setInterval(function () {
+            countDown();
+        }, 1000);
+    </script>
+
+   
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
