@@ -7,6 +7,6 @@ Portfolio website using (HTML, CSS, JS)
 # Mobile view 📱
 ![DV (2)](https://user-images.githubusercontent.com/127679907/227711431-4befd940-12fa-49d6-9fd9-22be83085aab.png)
 
-# Goal 🎯 :
+# Goal 🎯 
 To understand the concept of coding animated and beautiful webpages.
 
